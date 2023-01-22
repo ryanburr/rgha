@@ -302,8 +302,7 @@ export default function Home() {
   const annualEvents = [
     {
       name: 'Annual All Homeowners Meeting',
-      date: '2023-03-07',
-      time: '7:00pm',
+      date: '2023-03-07T19:00:00-05:00',
       location: 'Rochester Hills City Hall (auditorium)',
     },
     // {
