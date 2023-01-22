@@ -17,7 +17,7 @@ const importantDocs = [
       'Rules and guidelines around how the neighborhood is governed.',
     link: {
       href: '/documents/Rochester_Glens_Bylaws.pdf',
-      label: 'Bylaws (PDF)',
+      label: 'View PDF',
     },
   },
   {
@@ -26,7 +26,7 @@ const importantDocs = [
       'Because we are a deed restricted neighborhood, there are a few limitations on how you can use your property.',
     link: {
       href: '/documents/Rochester_Glens_Deed_Restrictions.pdf',
-      label: 'Deed Restrictions (PDF)',
+      label: 'View PDF',
     },
   },
 ]
