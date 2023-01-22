@@ -131,7 +131,7 @@ function SocialLink({ icon: Icon, ...props }) {
 function Contact() {
   return (
     <section className="rounded-2xl border border-stone-100 p-6 dark:border-stone-700/40">
-      <h2 className="flex text-sm font-semibold text-stone-900 dark:text-stone-100">
+      <h2 className="flex text-lg font-semibold text-stone-900 dark:text-stone-100">
         <QuestionMarkIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Contact the Board</span>
       </h2>
@@ -157,7 +157,7 @@ function Newsletter() {
       // action="/thank-you"
       className="rounded-2xl border border-stone-100 p-6 dark:border-stone-700/40"
     >
-      <h2 className="flex text-sm font-semibold text-stone-900 dark:text-stone-100">
+      <h2 className="flex text-lg font-semibold text-stone-900 dark:text-stone-100">
         <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
       </h2>
@@ -230,7 +230,7 @@ function Members() {
 
   return (
     <div className="rounded-2xl border border-stone-100 p-6 dark:border-stone-700/40">
-      <h2 className="flex text-sm font-semibold text-stone-900 dark:text-stone-100">
+      <h2 className="flex text-lg font-semibold text-stone-900 dark:text-stone-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Board Members</span>
       </h2>
