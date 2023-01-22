@@ -160,7 +160,7 @@ function Contact() {
       </p>
       <Button
         href="mailto:board@rochesterglens.org"
-        variant="secondary"
+        variant="primary"
         className="group mt-6 w-full"
       >
         Email the Board
@@ -368,7 +368,7 @@ export default function Home({ articles }) {
       {/* <Photos /> */}
       <Container className="mt-12 md:mt-14">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-8">
             <h2 className="flex text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
               Upcoming Events
             </h2>
