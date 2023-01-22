@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { formatDate } from '@/lib/formatDate'
+import { getDocuments } from '@/lib/getDocuments'
 
 const importantDocs = [
   {
@@ -53,7 +54,11 @@ const boardDocs = [
   },
 ]
 
-export default function Documents() {
+export default function Documents({
+  annual_minutes,
+  board_minutes,
+  newsletters,
+}) {
   return (
     <>
       <Head>
@@ -93,13 +98,13 @@ export default function Documents() {
         </h2>
         <ul
           role="list"
-          className="mt-6 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-6 grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {newsletterDocs.map((doc) => (
+          {newsletters.map((doc) => (
             <Card as="li" key={doc.date}>
               <Card.Eyebrow as="time" dateTime={doc.date} decorate>
                 <Link
-                  href={doc.link.href}
+                  href={doc.path}
                   className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
                 >
                   {formatDate(doc.date)}
@@ -113,13 +118,13 @@ export default function Documents() {
         </h2>
         <ul
           role="list"
-          className="mt-6 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-6 grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {annualDocs.map((doc) => (
+          {annual_minutes.map((doc) => (
             <Card as="li" key={doc.date}>
               <Card.Eyebrow as="time" dateTime={doc.date} decorate>
                 <Link
-                  href={doc.link.href}
+                  href={doc.path}
                   className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
                 >
                   {formatDate(doc.date)}
@@ -133,13 +138,13 @@ export default function Documents() {
         </h2>
         <ul
           role="list"
-          className="mt-6 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-6 grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {boardDocs.map((doc) => (
+          {board_minutes.map((doc) => (
             <Card as="li" key={doc.date}>
               <Card.Eyebrow as="time" dateTime={doc.date} decorate>
                 <Link
-                  href={doc.link.href}
+                  href={doc.path}
                   className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
                 >
                   {formatDate(doc.date)}
@@ -151,4 +156,17 @@ export default function Documents() {
       </SimpleLayout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // if (process.env.NODE_ENV === 'production') {
+  //   await generateRssFeed()
+  // }
+  return {
+    props: {
+      newsletters: await getDocuments('newsletters'),
+      annual_minutes: await getDocuments('annual_minutes'),
+      board_minutes: await getDocuments('board_minutes'),
+    },
+  }
 }
