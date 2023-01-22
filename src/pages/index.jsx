@@ -110,7 +110,7 @@ function ArrowDownIcon(props) {
 
 function Event({ event }) {
   return (
-    <Card as="event">
+    <Card as="section">
       <Card.Title>{event.name}</Card.Title>
       <Card.Eyebrow as="time" dateTime={event.date} decorate>
         {formatDate(event.date)}

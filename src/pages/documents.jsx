@@ -28,9 +28,9 @@ const importantDocs = [
 ]
 
 export default function Documents({
-  annual_minutes,
-  board_minutes,
-  newsletters,
+  annual_minutes = [],
+  board_minutes = [],
+  newsletters = [],
 }) {
   return (
     <>
