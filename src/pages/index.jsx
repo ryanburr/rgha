@@ -194,41 +194,37 @@ function Members() {
     {
       name: 'Stephanie Quick',
       title: 'President',
-      logo: logoPlanetaria,
       email: 'president@rochesterglens.org',
     },
     {
       name: 'Stephanie Pollock',
       title: 'Vice President',
-      logo: logoPlanetaria,
       email: 'vicepresident@rochesterglens.org',
     },
     {
       name: 'Paul Merlo',
       title: 'Treasurer',
-      logo: logoPlanetaria,
       email: 'treasurer@rochesterglens.org',
     },
     {
       name: 'Ryan Burr',
       title: 'Secretary',
-      logo: logoPlanetaria,
       email: 'secretary@rochesterglens.org',
     },
     {
       name: 'Andrew Kim',
       title: 'General',
-      logo: logoPlanetaria,
+      email: 'general1@rochesterglens.org',
     },
     {
       name: 'Bob Hare',
       title: 'General',
-      logo: logoPlanetaria,
+      email: 'general2@rochesterglens.org',
     },
     {
       name: 'Aubrey Alquiza',
       title: 'General',
-      logo: logoPlanetaria,
+      email: 'general3@rochesterglens.org',
     },
   ]
 
