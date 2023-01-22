@@ -49,6 +49,33 @@ function MailIcon(props) {
   )
 }
 
+function QuestionMarkIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M30.249 2.065C18.612 2.789 12.531 9.379 12 21.296h11.739c.147-4.128 2.451-7.214 6.741-7.669c4.211-.447 8.206.556 9.416 3.435c1.307 3.11-1.627 6.724-3.022 8.241c-2.582 2.813-6.776 4.865-8.95 7.9c-2.131 2.974-2.51 6.887-2.674 11.676h10.346c.145-3.062.349-5.995 1.742-7.898c2.266-3.092 5.65-4.541 8.486-6.983c2.709-2.334 5.559-5.147 6.043-9.501C53.32 7.466 42.683 1.289 30.249 2.065"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      ></path>
+
+      <ellipse
+        cx="30.515"
+        cy="55.567"
+        rx="6.532"
+        ry="6.433"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      ></ellipse>
+    </svg>
+  )
+}
+
 function BriefcaseIcon(props) {
   return (
     <svg
@@ -85,6 +112,18 @@ function ArrowDownIcon(props) {
   )
 }
 
+function Event({ event }) {
+  return (
+    <Card as="event">
+      <Card.Title>{event.name}</Card.Title>
+      <Card.Eyebrow as="time" dateTime={event.date} decorate>
+        {formatDate(event.date)}
+      </Card.Eyebrow>
+      <Card.Description>{event.location}</Card.Description>
+    </Card>
+  )
+}
+
 function Article({ article }) {
   return (
     <Card as="article">
@@ -108,10 +147,33 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
+function Contact() {
+  return (
+    <section className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <QuestionMarkIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Contact the Board</span>
+      </h2>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        For questions about the neighborhood, requests, or if you'd like to
+        check you dues balance,
+      </p>
+      <Button
+        href="mailto:board@rochesterglens.org"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        Email the Board
+      </Button>
+    </section>
+  )
+}
+
 function Newsletter() {
   return (
-    <form
-      action="/thank-you"
+    // TODO: set up email subscription
+    <section
+      // action="/thank-you"
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -119,6 +181,15 @@ function Newsletter() {
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        For current homeowners, join the{' '}
+      </p>
+      <Link
+        href="http://tinyurl.com/rochesterglens"
+        className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
+      >
+        Rochester Glens Facebook group.
+      </Link>
+      {/* <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
       <div className="mt-6 flex">
@@ -132,43 +203,51 @@ function Newsletter() {
         <Button type="submit" className="ml-4 flex-none">
           Join
         </Button>
-      </div>
-    </form>
+      </div> */}
+    </section>
   )
 }
 
-function Resume() {
-  let resume = [
+function Members() {
+  let members = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      name: 'Stephanie Quick',
+      title: 'President',
       logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      email: 'president@rochesterglens.org',
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      name: 'Stephanie Pollock',
+      title: 'Vice President',
+      logo: logoPlanetaria,
+      email: 'vicepresident@rochesterglens.org',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      name: 'Paul Merlo',
+      title: 'Treasurer',
+      logo: logoPlanetaria,
+      email: 'treasurer@rochesterglens.org',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      name: 'Ryan Burr',
+      title: 'Secretary',
+      logo: logoPlanetaria,
+      email: 'secretary@rochesterglens.org',
+    },
+    {
+      name: 'Andrew Kim',
+      title: 'General',
+      logo: logoPlanetaria,
+    },
+    {
+      name: 'Bob Hare',
+      title: 'General',
+      logo: logoPlanetaria,
+    },
+    {
+      name: 'Aubrey Alquiza',
+      title: 'General',
+      logo: logoPlanetaria,
     },
   ]
 
@@ -176,46 +255,41 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">Board Members</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-lime-800 dark:ring-0">
+        {members.map((member, i) => (
+          <li key={i} className="flex gap-4">
+            {/* <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-lime-800 dark:ring-0">
               <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-            </div>
+            </div> */}
             <dl className="flex flex-auto flex-wrap gap-x-2">
-              <dt className="sr-only">Company</dt>
+              <dt className="sr-only">Member</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
+                {member.name}
               </dd>
               <dt className="sr-only">Role</dt>
               <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                {role.title}
+                {member.title}
               </dd>
-              <dt className="sr-only">Date</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
-              >
-                <time dateTime={role.start.dateTime ?? role.start}>
-                  {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
-                </time>
-              </dd>
+              <dt className="sr-only">Email</dt>
+              {!!member.email && (
+                <dd
+                  className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                  aria-label={`${member.title} email address`}
+                >
+                  <Link
+                    href={`mailto:${member.email}`}
+                    className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
+                  >
+                    {member.email}
+                  </Link>
+                </dd>
+              )}
             </dl>
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
     </div>
   )
 }
@@ -248,6 +322,26 @@ function Photos() {
 }
 
 export default function Home({ articles }) {
+  const annualEvents = [
+    {
+      name: 'Annual All Homeowners Meeting',
+      date: '2023-03-07',
+      time: '7:00pm',
+      location: 'Rochester Hills City Hall (auditorium)',
+    },
+    // {
+    //   name: 'Garage Sale',
+    //   date: 'TBD',
+    //   time: '',
+    //   location: 'Rochester Glens Neighborhood',
+    // },
+    // {
+    //   name: 'Halloween Parade',
+    //   date: 'TBD',
+    //   time: '',
+    //   location: 'Rochester Glens Neighborhood',
+    // },
+  ]
   return (
     <>
       <Head>
@@ -260,32 +354,35 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Rochester Glens Neighborhood
+            Rochester Glens Homeowners Association
           </h1>
+          <h2 className="text-large sm:text-large font-bold tracking-tight text-zinc-500 dark:text-zinc-400">
+            Rochester Hills · Oakland County · Michigan · 48307
+          </h2>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Welcome to the neighborhood. As a homeowner or future homeowner,
-            you'll find everything you need.
+            Welcome to the neighborhood. As a current or future homeowner,
+            you'll find everything you need here.
           </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://facebook.com"
-              aria-label="Join us on Facebook"
-              icon={FacebookIcon}
-            />
-          </div>
         </div>
       </Container>
       {/* <Photos /> */}
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-12 md:mt-14">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+            <h2 className="flex text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+              Upcoming Events
+            </h2>
+            {annualEvents.map((event) => (
+              <Event key={event.name} event={event} />
             ))}
+            {/* {articles.map((article) => (
+              <Article key={article.slug} article={article} />
+            ))} */}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <Contact />
             <Newsletter />
-            <Resume />
+            <Members />
           </div>
         </div>
       </Container>
