@@ -27,33 +27,6 @@ const importantDocs = [
   },
 ]
 
-const newsletterDocs = [
-  {
-    date: '2019-04-30',
-    link: {
-      href: '/documents/newsletters/newsletter_2019_spring.pdf',
-    },
-  },
-]
-
-const annualDocs = [
-  {
-    date: '2020-03-11',
-    link: {
-      href: '/documents/annual_minutes/annual_minutes_2020.pdf',
-    },
-  },
-]
-
-const boardDocs = [
-  {
-    date: '2019-04-29',
-    link: {
-      href: '/documents/board_minutes/board_minutes_2019-04-29.pdf',
-    },
-  },
-]
-
 export default function Documents({
   annual_minutes,
   board_minutes,
