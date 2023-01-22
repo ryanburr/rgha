@@ -17,9 +17,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-blue-500 dark:text-zinc-200 dark:hover:text-blue-500"
+        className="group flex text-sm font-medium text-stone-800 transition hover:text-blue-500 dark:text-stone-200 dark:hover:text-blue-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-blue-500" />
+        <Icon className="h-6 w-6 flex-none fill-stone-500 transition group-hover:fill-blue-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -60,10 +60,10 @@ export default function About() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-stone-800 dark:text-stone-100 sm:text-5xl">
               Rochester Glens, a deed restricted neighborhood.
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-base text-stone-600 dark:text-stone-400">
               <p>
                 I’ve loved making things for as long as I can remember, and
                 wrote my first program when I was 6 years old, just two weeks
@@ -100,7 +100,7 @@ export default function About() {
               <SocialLink
                 href="mailto:board@rochesterglens.org"
                 icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+                className="mt-8 border-t border-stone-100 pt-8 dark:border-stone-700/40"
               >
                 board@rochesterglens.org
               </SocialLink>

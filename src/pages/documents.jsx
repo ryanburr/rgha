@@ -97,7 +97,7 @@ export default function Documents() {
         >
           {importantDocs.map((doc) => (
             <Card as="li" key={doc.name}>
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+              <h2 className="mt-6 text-base font-semibold text-stone-800 dark:text-stone-100">
                 {doc.name}
               </h2>
               <Card.Description>{doc.description}</Card.Description>
