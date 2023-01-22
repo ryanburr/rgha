@@ -44,6 +44,15 @@ const annualDocs = [
   },
 ]
 
+const boardDocs = [
+  {
+    date: '2019-04-29',
+    link: {
+      href: '/documents/board_minutes/board_minutes_2019-04-29.pdf',
+    },
+  },
+]
+
 export default function Documents() {
   return (
     <>
@@ -107,6 +116,26 @@ export default function Documents() {
           className="mt-6 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {annualDocs.map((doc) => (
+            <Card as="li" key={doc.date}>
+              <Card.Eyebrow as="time" dateTime={doc.date} decorate>
+                <Link
+                  href={doc.link.href}
+                  className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
+                >
+                  {formatDate(doc.date)}
+                </Link>
+              </Card.Eyebrow>
+            </Card>
+          ))}
+        </ul>
+        <h2 className="mt-8 flex text-2xl font-semibold text-stone-900 dark:text-stone-100">
+          Board Meeting Minutes
+        </h2>
+        <ul
+          role="list"
+          className="mt-6 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {boardDocs.map((doc) => (
             <Card as="li" key={doc.date}>
               <Card.Eyebrow as="time" dateTime={doc.date} decorate>
                 <Link
