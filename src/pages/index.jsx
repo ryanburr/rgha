@@ -21,6 +21,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import { formatDate } from '@/lib/formatDate'
+import { upcomingEvents } from '@/data/events'
 
 function MailIcon(props) {
   return (
@@ -109,12 +110,24 @@ function ArrowDownIcon(props) {
 }
 
 function Event({ event }) {
+  const display = !event.date
+    ? ''
+    : typeof event.date === 'string'
+    ? formatDate(event.date)
+    : `${formatDate(event.date.start)} - ${
+        typeof event.date.end === 'string'
+          ? formatDate(event.date.end)
+          : formatDate(event.date.end.value, event.date.end.format)
+      }`
+
   return (
     <Card as="section">
       <Card.Title>{event.name}</Card.Title>
-      <Card.Eyebrow as="time" dateTime={event.date} decorate>
-        {formatDate(event.date)}
-      </Card.Eyebrow>
+      {!!event.date && (
+        <Card.Eyebrow as="time" dateTime={display} decorate>
+          {display}
+        </Card.Eyebrow>
+      )}
       <Card.Description>{event.location}</Card.Description>
     </Card>
   )
@@ -299,25 +312,6 @@ function Photos() {
 }
 
 export default function Home() {
-  const annualEvents = [
-    {
-      name: 'Annual All Homeowners Meeting',
-      date: '2023-03-07T19:00:00-05:00',
-      location: 'Rochester Hills City Hall (auditorium)',
-    },
-    // {
-    //   name: 'Garage Sale',
-    //   date: 'TBD',
-    //   time: '',
-    //   location: 'Rochester Glens Neighborhood',
-    // },
-    // {
-    //   name: 'Halloween Parade',
-    //   date: 'TBD',
-    //   time: '',
-    //   location: 'Rochester Glens Neighborhood',
-    // },
-  ]
   return (
     <>
       <Head>
@@ -348,7 +342,7 @@ export default function Home() {
             <h2 className="flex text-2xl font-semibold text-stone-900 dark:text-stone-100">
               Upcoming Events
             </h2>
-            {annualEvents.map((event) => (
+            {upcomingEvents.map((event) => (
               <Event key={event.name} event={event} />
             ))}
             {/* {articles.map((article) => (

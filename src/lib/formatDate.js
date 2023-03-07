@@ -1,13 +1,15 @@
 import { format, parseISO } from 'date-fns'
 
-export function formatDate(dateString) {
+export function formatDate(dateString, displayFormat = 'date') {
   if (!dateString) {
     return ''
   }
   const hasTime = dateString.length > 10
   return format(
     parseISO(dateString),
-    `MMMM d, yyyy${hasTime ? ` 'at' h aa` : ``}`
+    displayFormat === 'date'
+      ? `MMMM d, yyyy${hasTime ? ` 'at' h aa` : ``}`
+      : 'h aa'
   )
 
   // return new Date(fullDate).toLocaleDateString('en-US', {
