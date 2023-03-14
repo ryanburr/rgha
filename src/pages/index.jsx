@@ -22,6 +22,7 @@ import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import { formatDate } from '@/lib/formatDate'
 import { upcomingEvents } from '@/data/events'
+import { members } from '@/data/members'
 
 function MailIcon(props) {
   return (
@@ -203,44 +204,6 @@ function Newsletter() {
 }
 
 function Members() {
-  let members = [
-    {
-      name: 'Stephanie Quick',
-      title: 'President',
-      email: 'president@rochesterglens.org',
-    },
-    {
-      name: 'Stephanie Pollock',
-      title: 'Vice President',
-      email: 'vicepresident@rochesterglens.org',
-    },
-    {
-      name: 'Paul Merlo',
-      title: 'Treasurer',
-      email: 'treasurer@rochesterglens.org',
-    },
-    {
-      name: 'Ryan Burr',
-      title: 'Secretary',
-      email: 'secretary@rochesterglens.org',
-    },
-    {
-      name: 'Andrew Kim',
-      title: 'General',
-      email: 'general1@rochesterglens.org',
-    },
-    {
-      name: 'Bob Hare',
-      title: 'General',
-      email: 'general2@rochesterglens.org',
-    },
-    {
-      name: 'Aubrey Alquiza',
-      title: 'General',
-      email: 'general3@rochesterglens.org',
-    },
-  ]
-
   return (
     <div className="rounded-2xl border border-stone-100 p-6 dark:border-stone-700/40">
       <h2 className="flex text-lg font-semibold text-stone-900 dark:text-stone-100">
