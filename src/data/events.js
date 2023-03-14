@@ -1,9 +1,9 @@
 export const upcomingEvents = [
-  {
-    name: 'Annual All Homeowners Meeting',
-    date: '2023-03-07T19:00:00-05:00',
-    location: 'Rochester Hills City Hall (auditorium)',
-  },
+  // {
+  //   name: 'Annual All Homeowners Meeting',
+  //   date: '2023-03-07T19:00:00-05:00',
+  //   location: 'Rochester Hills City Hall (auditorium)',
+  // },
   {
     name: 'Subdivision Garage Sale',
     date: {
