@@ -5,12 +5,14 @@ export const upcomingEvents = [
   //   location: 'Rochester Hills City Hall (auditorium)',
   // },
   {
-    name: 'Subdivision Garage Sale',
+    name: 'Neighborhood Garage Sale',
     date: {
       start: '2023-08-10',
       end: '2023-08-12',
     },
-    location: 'Rochester Glens Neighborhood',
+    location: 'Rochester Glens/Avon Hills Village Neighborhoods',
+    flyer: '/flyers/2023_Garage_Sale_Flyer.jpeg',
+    details: `Let people know you're participating by tying a balloon to your mailbox!`,
   },
   {
     name: 'Subdivision Electronics Recycling',
@@ -21,7 +23,9 @@ export const upcomingEvents = [
         format: 'time',
       },
     },
-    location: 'Rochester Glens Neighborhood',
+    location: 'Rochester Glens Neighborhood Commons',
+    details: `Bring your old electronics to be recycled in the commons along Deerhurst! Items NOT accepted: CRT monitors, Tube or projection TVs, Alkaline batteries, or Wooden Speakers.`,
+    details2: `Data Privacy: all hard drives are removed and sold to a company that is contractually required to destroy them. If you are not comfortable with that, remove the drives prior to bringing your electronics or pay $5 cash at the time of drop off, provide an email address and you will receive a certificate of destruction for each HDD paid for.`,
   },
   // {
   //   name: 'Halloween Parade',

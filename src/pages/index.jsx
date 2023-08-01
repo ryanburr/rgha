@@ -129,7 +129,22 @@ function Event({ event }) {
           {display}
         </Card.Eyebrow>
       )}
-      <Card.Description>{event.location}</Card.Description>
+      <Card.Description>
+        <b>Where: </b>
+        {event.location}
+      </Card.Description>
+      {event.flyer && (
+        <Card.Description>
+          <Link
+            href={event.flyer}
+            className="text-blue-500 no-underline visited:text-purple-600 hover:underline focus:underline active:hover:underline"
+          >
+            {'View Flyer'}
+          </Link>
+        </Card.Description>
+      )}
+      {event.details && <Card.Description>{event.details}</Card.Description>}
+      {event.details2 && <Card.Description>{event.details2}</Card.Description>}
     </Card>
   )
 }
