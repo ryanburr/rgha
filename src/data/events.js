@@ -4,16 +4,16 @@ export const upcomingEvents = [
   //   date: '2023-03-07T19:00:00-05:00',
   //   location: 'Rochester Hills City Hall (auditorium)',
   // },
-  {
-    name: 'Neighborhood Garage Sale',
-    date: {
-      start: '2023-08-10',
-      end: '2023-08-12',
-    },
-    location: 'Rochester Glens/Avon Hills Village Neighborhoods',
-    flyer: '/flyers/2023_Garage_Sale_Flyer.jpeg',
-    details: `Let people know you're participating by tying a balloon to your mailbox!`,
-  },
+  // {
+  //   name: 'Neighborhood Garage Sale',
+  //   date: {
+  //     start: '2023-08-10',
+  //     end: '2023-08-12',
+  //   },
+  //   location: 'Rochester Glens/Avon Hills Village Neighborhoods',
+  //   flyer: '/flyers/2023_Garage_Sale_Flyer.jpeg',
+  //   details: `Let people know you're participating by tying a balloon to your mailbox!`,
+  // },
   {
     name: 'Subdivision Electronics Recycling',
     date: {
