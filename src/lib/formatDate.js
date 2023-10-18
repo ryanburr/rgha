@@ -8,7 +8,7 @@ export function formatDate(dateString, displayFormat = 'date') {
   return format(
     parseISO(dateString),
     displayFormat === 'date'
-      ? `MMMM d, yyyy${hasTime ? ` 'at' h aa` : ``}`
+      ? `MMMM d, yyyy${hasTime ? ` 'at' h:m aa` : ``}`
       : 'h aa'
   )
 

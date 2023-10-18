@@ -42,7 +42,7 @@ export default function Documents({
         />
       </Head>
       <SimpleLayout title="Historical documents for the neighborhood." intro="">
-        <h2 className="flex text-2xl font-semibold text-stone-900 dark:text-stone-100">
+        <h2 className="mb-6 flex text-2xl font-semibold text-stone-900 dark:text-stone-100">
           Important Documents
         </h2>
         <ul
@@ -51,7 +51,7 @@ export default function Documents({
         >
           {importantDocs.map((doc) => (
             <Card as="li" key={doc.name}>
-              <h2 className="mt-6 text-base font-semibold text-stone-800 dark:text-stone-100">
+              <h2 className="text-base font-semibold text-stone-800 dark:text-stone-100">
                 {doc.name}
               </h2>
               <Card.Description>{doc.description}</Card.Description>
