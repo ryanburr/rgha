@@ -323,6 +323,13 @@ export default function Home() {
             {upcomingEvents.map((event) => (
               <Event key={event.name} event={event} />
             ))}
+            {
+              upcomingEvents.length === 0 && (
+                <p className="text-stone-600 dark:text-stone-400">
+                  There are no upcoming events at this time.
+                </p>
+              )
+            }
             {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))} */}

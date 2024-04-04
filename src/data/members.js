@@ -5,7 +5,7 @@ export const members = [
     email: 'president@rochesterglens.org',
   },
   {
-    name: 'Stephanie Pollock',
+    name: 'Ryan Burr',
     title: 'Vice President',
     email: 'vicepresident@rochesterglens.org',
   },
@@ -15,7 +15,7 @@ export const members = [
     email: 'treasurer@rochesterglens.org',
   },
   {
-    name: 'Ryan Burr',
+    name: 'Aubrey Alquiza',
     title: 'Secretary',
     email: 'secretary@rochesterglens.org',
   },
@@ -30,7 +30,7 @@ export const members = [
     email: 'general2@rochesterglens.org',
   },
   {
-    name: 'Aubrey Alquiza',
+    name: '<vacant>',
     title: 'General',
     email: 'general3@rochesterglens.org',
   },

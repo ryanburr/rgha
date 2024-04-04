@@ -1,10 +1,5 @@
 export const upcomingEvents = [
   // {
-  //   name: 'Annual All Homeowners Meeting',
-  //   date: '2023-03-07T19:00:00-05:00',
-  //   location: 'Rochester Hills City Hall (auditorium)',
-  // },
-  // {
   //   name: 'Neighborhood Garage Sale',
   //   date: {
   //     start: '2023-08-10',
@@ -33,9 +28,9 @@ export const upcomingEvents = [
   //   location: 'Rochester Glens Commons (on Deerhurst)',
   //   details: `Meet at the commons at 5:40pm. Parade to start at 5:55pm, and go from the Commons on Deerhurst, turn onto Dickson Lane and end at the cul-de-sac on Dickson Lane where kids can grab a goody bag and some snacks from the Board.`,
   // },
-  {
-    name: 'Annual All Homeowners Meeting',
-    date: '2024-03-20T19:00:00-04:00',
-    location: 'Rochester Hills City Hall (auditorium)',
-  },
+  // {
+  //   name: 'Annual All Homeowners Meeting',
+  //   date: '2024-03-20T19:00:00-04:00',
+  //   location: 'Rochester Hills City Hall (auditorium)',
+  // },
 ]
