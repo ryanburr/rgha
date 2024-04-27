@@ -1,3 +1,5 @@
+import * as path from 'path';
+
 export const upcomingEvents = [
   // {
   //   name: 'Neighborhood Garage Sale',
@@ -33,26 +35,34 @@ export const upcomingEvents = [
   //   date: '2024-03-20T19:00:00-04:00',
   //   location: 'Rochester Hills City Hall (auditorium)',
   // },
+  // {
+  //   name: 'Commons Lawn Fertilization',
+  //   date: {
+  //     start: '2024-04-08',
+  //     end: {
+  //       value: '2024-04-12',
+  //       format: 'date',
+  //     },
+  //   },
+  //   location: 'Rochester Glens Neighborhood Commons',
+  // },
+  // {
+  //   name: 'Commons Herbicide Spraying',
+  //   date: {
+  //     start: '2024-04-22',
+  //     end: {
+  //       value: '2024-04-26',
+  //       format: 'date',
+  //     },
+  //   },
+  //   location: 'Rochester Glens Neighborhood Commons',
+  // },
   {
-    name: 'Commons Lawn Fertilization',
-    date: {
-      start: '2024-04-08',
-      end: {
-        value: '2024-04-12',
-        format: 'date',
-      },
-    },
-    location: 'Rochester Glens Neighborhood Commons',
-  },
-  {
-    name: 'Commons Herbicide Spraying',
-    date: {
-      start: '2024-04-22',
-      end: {
-        value: '2024-04-26',
-        format: 'date',
-      },
-    },
-    location: 'Rochester Glens Neighborhood Commons',
+    name: 'Stamp Out Hunger Food Drive',
+    date: '2024-05-11',
+    location: 'By your mailbox',
+    details: `Put your non-perishable donations in a bag by your mailbox.`,
+    details2: `Donations will be picked up and delivered to the Neighborhood House Food Pantry.`,
+    flyer: path.join('documents', 'flyers', '2024_neighborhood_house_food_drive.pdf')
   },
 ]
