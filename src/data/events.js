@@ -65,10 +65,15 @@ export const upcomingEvents = [
   //   details2: `Donations will be picked up and delivered to the Neighborhood House Food Pantry.`,
   //   flyer: path.join('documents', 'flyers', '2024_neighborhood_house_food_drive.pdf')
   // },
+  // {
+  //   name: 'Halloween Parade',
+  //   date: '2024-10-31T17:40:00-04:00',
+  //   location: 'Rochester Glens Commons (on Deerhurst)',
+  //   details: `Meet at the commons at 5:40pm. Donuts and cider will be available in the commons before hand. Parade to start at 5:55pm, and go from the Commons on Deerhurst, turn onto Dickson Lane and end at the cul-de-sac on Dickson Lane where kids can grab a goody bag and glow stick from the Board.`,
+  // },
   {
-    name: 'Halloween Parade',
-    date: '2024-10-31T17:40:00-04:00',
-    location: 'Rochester Glens Commons (on Deerhurst)',
-    details: `Meet at the commons at 5:40pm. Donuts and cider will be available in the commons before hand. Parade to start at 5:55pm, and go from the Commons on Deerhurst, turn onto Dickson Lane and end at the cul-de-sac on Dickson Lane where kids can grab a goody bag and glow stick from the Board.`,
-  },
+    name: 'Annual All Homeowners Meeting',
+    date: '2025-03-19T19:00:00-04:00',
+    location: 'Rochester Hills City Hall (auditorium)',
+  }
 ]
