@@ -71,9 +71,31 @@ export const upcomingEvents = [
   //   location: 'Rochester Glens Commons (on Deerhurst)',
   //   details: `Meet at the commons at 5:40pm. Donuts and cider will be available in the commons before hand. Parade to start at 5:55pm, and go from the Commons on Deerhurst, turn onto Dickson Lane and end at the cul-de-sac on Dickson Lane where kids can grab a goody bag and glow stick from the Board.`,
   // },
+  // {
+  //   name: 'Annual All Homeowners Meeting',
+  //   date: '2025-03-19T19:00:00-04:00',
+  //   location: 'Rochester Hills City Hall (auditorium)',
+  // },
   {
-    name: 'Annual All Homeowners Meeting',
-    date: '2025-03-19T19:00:00-04:00',
-    location: 'Rochester Hills City Hall (auditorium)',
+    name: 'Commons Lawn Fertilization (first service)',
+    date: {
+      start: '2025-04-06',
+      end: {
+        value: '2025-04-12',
+        format: 'date',
+      },
+    },
+    location: 'Rochester Glens Neighborhood Commons',
+  },
+  {
+    name: 'Commons Lawn Fertilization (second service)',
+    date: {
+      start: '2025-04-20',
+      end: {
+        value: '2025-04-26',
+        format: 'date',
+      },
+    },
+    location: 'Rochester Glens Neighborhood Commons',
   }
 ]
