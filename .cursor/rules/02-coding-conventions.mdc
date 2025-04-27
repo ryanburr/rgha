@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Coding Conventions
+
+## Component Structure
+- React components are located in [src/components](mdc:src/components)
+- Each component should be in its own directory with an index.js file
+- Use functional components with hooks
+- Props should be properly typed
+
+## Styling
+- Use Tailwind CSS for styling
+- Follow utility-first CSS approach
+- Custom styles should be added to [src/styles](mdc:src/styles)
+- Use clsx for conditional class names
+
+## File Organization
+- Keep components small and focused
+- Use index.js files for cleaner imports
+- Place shared utilities in [src/lib](mdc:src/lib)
+- Store static data in [src/data](mdc:src/data)
+
+## Best Practices
+- Use ESLint for code linting
+- Follow Prettier formatting rules
+- Write clean, self-documenting code
+- Keep components modular and reusable
+- Use meaningful variable and function names

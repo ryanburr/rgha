@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Overview
+
+This is a Next.js project using React and Tailwind CSS. The project follows a modern React application structure with the following key directories:
+
+## Main Directories
+- [src/pages](mdc:src/pages) - Next.js pages and routing
+- [src/components](mdc:src/components) - Reusable React components
+- [src/styles](mdc:src/styles) - Global styles and Tailwind configuration
+- [src/lib](mdc:src/lib) - Utility functions and shared logic
+- [src/data](mdc:src/data) - Data files and content
+- [src/images](mdc:src/images) - Image assets
+
+## Key Configuration Files
+- [package.json](mdc:package.json) - Project dependencies and scripts
+- [next.config.mjs](mdc:next.config.mjs) - Next.js configuration
+- [tailwind.config.js](mdc:tailwind.config.js) - Tailwind CSS configuration
+- [jsconfig.json](mdc:jsconfig.json) - JavaScript configuration for the project
+
+## Technology Stack
+- Next.js 13
+- React 18
+- Tailwind CSS
+- MDX for content
+- HeadlessUI for UI components

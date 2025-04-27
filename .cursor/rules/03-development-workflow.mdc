@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Development Workflow
+
+## Getting Started
+1. Install dependencies using `npm install`
+2. Run development server with `npm run dev`
+3. Build production version with `npm run build`
+4. Start production server with `npm run start`
+
+## Project Scripts
+All scripts are defined in [package.json](mdc:package.json):
+- `dev`: Runs development server
+- `build`: Creates production build
+- `start`: Starts production server
+- `lint`: Runs ESLint
+
+## Development Process
+1. Create new components in [src/components](mdc:src/components)
+2. Add new pages in [src/pages](mdc:src/pages)
+3. Update styles in [tailwind.config.js](mdc:tailwind.config.js)
+4. Use Next.js features from [next.config.mjs](mdc:next.config.mjs)
+
+## Code Quality
+- ESLint is configured for code quality
+- Prettier handles code formatting
+- Follow existing patterns in the codebase
+- Keep components and functions focused and well-documented
