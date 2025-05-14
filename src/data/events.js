@@ -76,26 +76,26 @@ export const upcomingEvents = [
   //   date: '2025-03-19T19:00:00-04:00',
   //   location: 'Rochester Hills City Hall (auditorium)',
   // },
-  {
-    name: 'Commons Lawn Fertilization (first service)',
-    date: {
-      start: '2025-04-06',
-      end: {
-        value: '2025-04-12',
-        format: 'date',
-      },
-    },
-    location: 'Rochester Glens Neighborhood Commons',
-  },
-  {
-    name: 'Commons Lawn Fertilization (second service)',
-    date: {
-      start: '2025-04-20',
-      end: {
-        value: '2025-04-26',
-        format: 'date',
-      },
-    },
-    location: 'Rochester Glens Neighborhood Commons',
-  }
+  // {
+  //   name: 'Commons Lawn Fertilization (first service)',
+  //   date: {
+  //     start: '2025-04-06',
+  //     end: {
+  //       value: '2025-04-12',
+  //       format: 'date',
+  //     },
+  //   },
+  //   location: 'Rochester Glens Neighborhood Commons',
+  // },
+  // {
+  //   name: 'Commons Lawn Fertilization (second service)',
+  //   date: {
+  //     start: '2025-04-20',
+  //     end: {
+  //       value: '2025-04-26',
+  //       format: 'date',
+  //     },
+  //   },
+  //   location: 'Rochester Glens Neighborhood Commons',
+  // }
 ]
