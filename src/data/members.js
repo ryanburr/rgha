@@ -5,7 +5,7 @@ export const members = [
     email: 'president@rochesterglens.org',
   },
   {
-    name: 'Ryan Burr',
+    name: 'Sam Bartalotta',
     title: 'Vice President',
     email: 'vicepresident@rochesterglens.org',
   },
@@ -20,7 +20,7 @@ export const members = [
     email: 'secretary@rochesterglens.org',
   },
   {
-    name: 'Sam Bartalotta',
+    name: 'Sebastian Schneider',
     title: 'General',
     email: 'general1@rochesterglens.org',
   },
@@ -30,7 +30,7 @@ export const members = [
     email: 'general2@rochesterglens.org',
   },
   {
-    name: '<vacant>',
+    name: 'Justin Gabbara',
     title: 'General',
     email: 'general3@rochesterglens.org',
   },
